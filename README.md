@@ -14,8 +14,10 @@ This project focuses on performing **Sales Data Analysis using MySQL** and visua
 ├── queries/
 │   └── sales_analysis_queries.sql  # SQL scripts for data analysis
 
+---
 
-🔍 Key SQL Features Implemented
+## 🔍 Key SQL Features Implemented
+
 ✅ Filtering & Sorting – Extract specific records based on year, city, and order status
 ✅ Aggregations – Total sales, average sales, order counts by region
 ✅ Joins – INNER, LEFT, RIGHT, FULL JOINs on customer and order data
@@ -23,12 +25,13 @@ This project focuses on performing **Sales Data Analysis using MySQL** and visua
 ✅ Grouping & Categorization – Using GROUP BY, HAVING, and CASE
 ✅ Common Table Expressions (CTEs) – For reusable logic and cleaner queries
 
+---
 
+##📊 Power BI Dashboard Overview
 
-📊 Power BI Dashboard Overview
 The Power BI dashboard offers visual insight into the sales data with intuitive slicers, cards, and charts:
 
-🎛️ Slicers
+## 🎛️ Slicers
 
 Product
 
@@ -39,7 +42,7 @@ Order Status
 Year
 
 
-📌 Cards
+## 📌 Cards
 
 Total Sales
 
@@ -48,7 +51,7 @@ Estimated Profit
 Order Count
 
 
-🗺️ Visuals
+## 🗺️ Visuals
 
 Global Sales Overview by Deal Size (Map)
 
@@ -58,9 +61,9 @@ Order Breakdown by Status & Deal Size (Clustered Bar Chart)
 
 Sales Trend by Order Status (Line Chart)
 
+---
 
-
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Database: MySQL
 
@@ -70,8 +73,9 @@ Visualization: Power BI
 
 Dataset: sales_data_sample.csv
 
+---
 
-🚀 How to Use
+## 🚀 How to Use
 
 1. Clone the repository:
 
@@ -89,6 +93,11 @@ Open and execute sales_analysis_queries.sql from the queries/ folder to explore 
 
 Open Sales_Analysis_Dashboard.pbix in Power BI Desktop (file located in dashboards/)
 
+📄 Dashboard PDF Preview: https://github.com/Progati00/SQL-Sales-Data-Analysis-Project/blob/main/dashboards/Sales_Analysis_Dashboard.pdf
+
+This PDF provides a static view of the Power BI dashboard for easier access and preview, especially for users who do not have Power BI installed.
+
+
 5. Customize further
 
 Modify SQL or visuals to tailor insights to your business needs
@@ -97,6 +106,8 @@ Modify SQL or visuals to tailor insights to your business needs
 📈 Use Cases
 
 Sales Performance Monitoring
+
+---
 
 Customer Purchase Behavior Analysis
 
