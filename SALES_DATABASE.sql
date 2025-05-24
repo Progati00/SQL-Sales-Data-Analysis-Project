@@ -1,4 +1,15 @@
+-- ============================================================
+-- PROJECT: SALES DATA ANALYSIS
+-- DATABASE: sales
+-- TABLE: sales_data_sample
+-- ============================================================
+
+
+-- Create and Use Database
+create database sales;
 use sales;
+
+-- View All Records in the Table
 select * from sales_data_sample;
 
 -- Top 20 Sales Data for the Year 2004
@@ -117,3 +128,41 @@ UNION
 SELECT A.ORDERNUMBER, A.CUSTOMERNAME, A.SALES, B.ORDERNUMBER AS MatchedOrder, B.SALES AS MatchedSales
 FROM sales_data_sample A
 RIGHT JOIN sales_data_sample B ON A.CUSTOMERNAME = B.CUSTOMERNAME;
+
+-- Top 10 Sales of 2005 Using CTE
+WITH TopSales2005 AS (
+    SELECT *
+    FROM sales_data_sample
+    WHERE YEAR_ID = 2005
+    ORDER BY SALES DESC
+    LIMIT 10
+)
+SELECT * FROM TopSales2005;
+
+
+-- Classify Sales into Categories Using CTE
+WITH SalesCategory AS (
+    SELECT ORDERNUMBER, SALES,
+           CASE 
+               WHEN SALES > 10000 THEN 'High'
+               WHEN SALES BETWEEN 4000 AND 10000 THEN 'Medium'
+               ELSE 'Low'
+           END AS Category
+    FROM sales_data_sample
+)
+SELECT * FROM SalesCategory;
+
+
+-- Using CTE for Monthly Sales Summary
+WITH MonthlySales AS (
+    SELECT MONTH_ID, SUM(SALES) AS TotalSales, COUNT(*) AS OrderCount
+    FROM sales_data_sample
+    GROUP BY MONTH_ID
+)
+SELECT * FROM MonthlySales
+ORDER BY MONTH_ID;
+
+
+-- ============================================================
+-- END OF PROJECT
+-- ============================================================
